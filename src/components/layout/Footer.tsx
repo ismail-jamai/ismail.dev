@@ -23,12 +23,12 @@ const Footer: React.FC = () => {
               Ismail<span className="text-primary">.dev</span>
             </h2>
             <p className="text-muted-foreground max-w-md">
-              A passionate full-stack developer specializing in creating beautiful, functional, 
-              and user-friendly web applications with modern technologies.
+            Un développeur full-stack passionné spécialisé dans la création d’applications Web belles, 
+            fonctionnelles et conviviales avec des technologies modernes.
             </p>
             <div className="flex space-x-4 pt-2">
               <a 
-                href="https://github.com" 
+                href="https://github.com/ismail-jamai" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 rounded-full hover:text-primary transition-colors duration-300"
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/ismail-jamai-336571337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 rounded-full hover:text-primary transition-colors duration-300"
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/IsmaailJamai?t=hyW4KCyzkCgaz18W07uYcw&s=09" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 rounded-full hover:text-primary transition-colors duration-300"
@@ -84,17 +84,17 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold text-lg">Contact</h3>
             <ul className="space-y-2">
               <li className="text-muted-foreground">
-                <a href="mailto:contact@example.com" className="hover:text-primary transition-colors">
-                  contact@example.com
+                <a href="mailto:ismailjamaiwac2003@gmail.com" className="hover:text-primary transition-colors">
+                ismailjamaiwac2003@gmail.com
                 </a>
               </li>
               <li className="text-muted-foreground">
                 <a href="tel:+14155552671" className="hover:text-primary transition-colors">
-                  +1 (415) 555-2671
+                  +1 6 41 85 04 76
                 </a>
               </li>
               <li className="text-muted-foreground">
-                San Francisco, CA
+                moroc, safi
               </li>
             </ul>
           </div>

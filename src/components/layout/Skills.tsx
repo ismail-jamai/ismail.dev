@@ -51,9 +51,10 @@ const Skills: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title mx-auto">My Skills</h2>
           <p className="text-muted-foreground mt-6">
-            I've worked with a variety of technologies across the full stack, focusing on 
-            modern JavaScript frameworks and tools that enable creating fast, responsive, 
-            and user-friendly applications.
+          J’ai travaillé avec une variété de technologies sur l’ensemble de la pile,
+           en me concentrant sur des frameworks et des outils JavaScript
+            modernes qui permettent de créer des applications rapides,
+            réactives et conviviales.
           </p>
         </div>
         

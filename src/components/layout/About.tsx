@@ -11,9 +11,11 @@ const About: React.FC = () => {
       
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title mx-auto">About Me</h2>
+          <h2 className="section-title mx-auto">À propos de moi</h2>
           <p className="text-muted-foreground mt-6">
-            I'm a dedicated full-stack developer with a passion for creating beautiful, 
+            Étudiant en développement web full stack, passionné par la création de sites web modernes.
+             J’accorde une grande importance à l’accessibilité, au responsive design et à l’expérience utilisateur.
+             'm a dedicated full-stack developer with a passion for creating beautiful, 
             functional web applications. With expertise in modern technologies 
             and a keen eye for design, I build solutions that delight users and solve real problems.
           </p>
@@ -25,9 +27,9 @@ const About: React.FC = () => {
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
               <Code className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Clean Code</h3>
+            <h3 className="text-xl font-semibold mb-3">Code propre</h3>
             <p className="text-muted-foreground">
-              I write clean, maintainable code with a focus on readability, performance, and best practices.
+            J’écris du code propre et maintenable en mettant l’accent sur la lisibilité, les performances et les meilleures pratiques.
             </p>
           </div>
           
@@ -36,9 +38,9 @@ const About: React.FC = () => {
             <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center mb-4">
               <Laptop className="w-6 h-6 text-secondary" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Modern Stack</h3>
+            <h3 className="text-xl font-semibold mb-3">Pile moderne</h3>
             <p className="text-muted-foreground">
-              I specialize in React, TypeScript, and modern tools like Vite to build fast, responsive applications.
+            Je me spécialise dans React, laravel et les outils modernes comme Vite pour créer des applications rapides et réactives.
             </p>
           </div>
           
@@ -47,9 +49,9 @@ const About: React.FC = () => {
             <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
               <Zap className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Fast Delivery</h3>
+            <h3 className="text-xl font-semibold mb-3">Livraison rapide</h3>
             <p className="text-muted-foreground">
-              I develop and iterate quickly without sacrificing quality, delivering value on time, every time.
+            Je développe et itére rapidement sans sacrifier la qualité, en fournissant de la valeur à temps, à chaque fois.
             </p>
           </div>
         </div>
@@ -58,7 +60,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden border border-border/40">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZ3JhbW1lcnxlbnwwfHwwfHx8MA%3D%3D" 
+                src="/images/OUA_2067.jpg" 
                 alt="About Ismail" 
                 className="w-full h-full object-cover"
               />
@@ -72,28 +74,21 @@ const About: React.FC = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold">My Journey</h3>
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I've worked with startups and established companies to build everything from simple landing pages to complex web applications.
-            </p>
-            <p className="text-muted-foreground">
-              I'm constantly learning and experimenting with new technologies to stay at the forefront of web development. My approach combines technical excellence with a strong understanding of user experience and business needs.
+            Je maîtrise les technologies front-end (HTML, CSS, JavaScript, React) et back-end (Node.js, PHP, Laravel). 
+            J’explore en profondeur les frameworks modernes et cherche à allier créativité,
+             performance technique et expérience utilisateur optimisée dans chacun de mes projets..
             </p>
             
             <div className="pt-4 grid grid-cols-2 gap-4">
+              
               <div className="space-y-1">
                 <p className="text-3xl font-bold text-primary">5+</p>
-                <p className="text-sm text-muted-foreground">Years Experience</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-3xl font-bold text-primary">50+</p>
                 <p className="text-sm text-muted-foreground">Projects Completed</p>
               </div>
+              
               <div className="space-y-1">
-                <p className="text-3xl font-bold text-primary">20+</p>
-                <p className="text-sm text-muted-foreground">Happy Clients</p>
-              </div>
-              <div className="space-y-1">
-                <p className="text-3xl font-bold text-primary">10+</p>
-                <p className="text-sm text-muted-foreground">Technologies Mastered</p>
+                <p className="text-3xl font-bold text-primary">8+</p>
+                <p className="text-sm text-muted-foreground">Technologies maîtrisées</p>
               </div>
             </div>
           </div>

@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
         <div className="w-full md:w-1/2 space-y-6 z-10">
           <div className="flex flex-col relative parallax-layer">
             <AnimatedText 
-              text="Hello, I'm" 
+              text="Bonjour, je suis" 
               tag="h2"
               className="text-lg md:text-xl text-muted-foreground"
             />
@@ -67,14 +67,14 @@ const Hero: React.FC = () => {
           </div>
           
           <AnimatedText 
-            text="Full-stack Developer specializing in React & Vite"
+            text="passionné par la création d'expériences web élégantes, intuitives et fonctionnelles"
             tag="h3"
             className="text-xl md:text-2xl font-medium text-muted-foreground"
             delay={1400}
           />
           
           <AnimatedText
-            text="I craft elegant, intuitive, and high-performance web experiences with meticulous attention to detail."
+            text="Je crée des expériences web élégantes, intuitives et performantes avec une attention méticuleuse aux détails."
             tag="p"
             className="max-w-lg text-muted-foreground"
             delay={2000}
@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
           
           <div className="flex space-x-4 pt-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/ismail-jamai" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors duration-300"
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/ismail-jamai-336571337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors duration-300"
@@ -100,7 +100,7 @@ const Hero: React.FC = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="mailto:contact@example.com" 
+              href="ismailjamaiwac2003@gmail.com" 
               className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors duration-300"
               aria-label="Email contact"
             >
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white/10 shadow-xl z-10">
               <img 
-                src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBtYW58ZW58MHx8MHx8fDA%3D" 
+                src="/images/OUA_2067.jpg" 
                 alt="Ismail Jamai" 
                 className="w-full h-full object-cover"
               />
@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
         href="#about" 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
       >
-        <span className="text-sm mb-2">Scroll Down</span>
+        <span className="text-sm mb-2">Faites défiler</span>
         <ArrowDown className="w-5 h-5 animate-bounce" />
       </a>
     </section>

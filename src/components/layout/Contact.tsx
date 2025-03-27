@@ -53,10 +53,11 @@ const Contact: React.FC = () => {
       
       <div className="section-container relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title mx-auto">Get In Touch</h2>
+          <h2 className="section-title mx-auto">Contactez-nous</h2>
           <p className="text-muted-foreground mt-6">
-            I'm always open to new opportunities and collaborations. Whether you have a project 
-            in mind or just want to connect, feel free to reach out!
+          Je suis toujours ouvert à de nouvelles opportunités et collaborations.
+           Que vous ayez un projet en tête ou que vous souhaitiez
+            simplement vous connecter, n’hésitez pas à nous contacter !
           </p>
         </div>
         
@@ -64,7 +65,7 @@ const Contact: React.FC = () => {
           {/* Contact information */}
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-card border border-border/40 rounded-xl p-6 space-y-6">
-              <h3 className="text-xl font-bold">Contact Information</h3>
+              <h3 className="text-xl font-bold">Coordonnées</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -74,10 +75,10 @@ const Contact: React.FC = () => {
                   <div>
                     <p className="font-medium">Email</p>
                     <a 
-                      href="mailto:contact@example.com" 
+                      href="mailto:ismailjamaiwac2003@gmail.com" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      contact@example.com
+                      ismailjamaiwac2003@gmail.com
                     </a>
                   </div>
                 </div>
@@ -88,7 +89,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">moroc, safi</p>
                   </div>
                 </div>
                 
@@ -102,7 +103,7 @@ const Contact: React.FC = () => {
                       href="tel:+14155552671" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +1 (415) 555-2671
+                      +212 6 41 85 04 76
                     </a>
                   </div>
                 </div>

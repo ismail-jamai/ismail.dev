@@ -15,11 +15,11 @@ const Projects: React.FC = () => {
       liveUrl: 'https://example.com',
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates and team collaboration features.',
+      title: 'calculations',
+      description: 'Créez une calculatrice interactive avec HTML, CSS et JavaScript, incluant des animations et un design réactif. Implémentez les opérations de base (+, -, *, /) et la prise en charge des entrées clavier. 🚀',
       image: 'https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGFzayUyMG1hbmFnZW1lbnR8ZW58MHx8MHx8fDA%3D',
-      tags: ['React', 'TypeScript', 'Firebase', 'Redux'],
-      githubUrl: 'https://github.com',
+      tags: ['HTML', 'javaScript', 'css', ],
+      githubUrl: 'https://github.com/ismail-jamai/calculations.git',
       liveUrl: 'https://example.com',
     },
     {
@@ -30,14 +30,7 @@ const Projects: React.FC = () => {
       githubUrl: 'https://github.com',
       liveUrl: 'https://example.com',
     },
-    {
-      title: 'Recipe Finder App',
-      description: 'A recipe finder application that allows users to search for recipes based on ingredients they have on hand.',
-      image: 'https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVjaXBlfGVufDB8fDB8fHww',
-      tags: ['Next.js', 'Tailwind CSS', 'REST API'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
-    },
+   
     {
       title: 'Portfolio Website',
       description: 'A minimalist portfolio website for a photographer featuring image galleries and contact forms.',
@@ -64,10 +57,12 @@ const Projects: React.FC = () => {
       
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="section-title mx-auto">Featured Projects</h2>
+          <h2 className="section-title mx-auto">Projets en vedette</h2>
           <p className="text-muted-foreground mt-6">
-            Here are some of my recent projects. Each one presented unique challenges 
-            and opportunities to create elegant solutions using modern web technologies.
+            
+Voici quelques-uns de mes projets récents. 
+Chacun d’entre eux présentait des défis et des 
+opportunités uniques pour créer des solutions élégantes en utilisant les technologies Web modernes.
           </p>
         </div>
         
