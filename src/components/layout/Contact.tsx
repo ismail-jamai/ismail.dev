@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -112,14 +111,14 @@ const Contact: React.FC = () => {
             
             <div className="bg-card border border-border/40 rounded-xl overflow-hidden">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d201064.44653837118!2d-122.57606081640625!3d37.75932458558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1650000000000!5m2!1sen!2suk" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108848.123456789!2d-9.2!3d32.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda3b0c3c0c3c0c3%3A0x0!2sSafi%2C%20Morocco!5e0!3m2!1sen!2sma!4v1650000000000!5m2!1sen!2sma" 
                 width="100%" 
                 height="250" 
                 style={{ border: 0 }} 
                 allowFullScreen 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Location map"
+                title="Location map - Safi, Morocco"
               ></iframe>
             </div>
           </div>

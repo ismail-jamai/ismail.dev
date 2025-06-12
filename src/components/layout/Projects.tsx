@@ -1,10 +1,35 @@
-
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ProjectCard from '../ui/ProjectCard';
 import { Button } from '@/components/ui/button';
 import { ArrowRightIcon } from 'lucide-react';
 
 const Projects: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const projects = [
     {
       title: 'E-Commerce Platform',
@@ -23,14 +48,13 @@ const Projects: React.FC = () => {
       liveUrl: 'https://example.com',
     },
     {
-      title: 'Weather Dashboard',
-      description: 'An interactive weather dashboard that displays current and forecasted weather data with beautiful visualizations.',
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D',
-      tags: ['React', 'D3.js', 'API Integration', 'CSS3'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
+      title: 'Réservation Terrain',
+      description: 'Application web de réservation de terrains de sport. Permet aux utilisateurs de réserver des terrains, gérer leurs réservations et visualiser les disponibilités en temps réel.',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
+      tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
+      githubUrl: 'https://github.com/ismail-jamai/R-servation-terrain.git',
+      liveUrl: '#',
     },
-   
     {
       title: 'Portfolio Website',
       description: 'A minimalist portfolio website for a photographer featuring image galleries and contact forms.',
@@ -50,39 +74,43 @@ const Projects: React.FC = () => {
   ];
   
   return (
-    <section id="projects" className="py-24 bg-background relative overflow-hidden">
+    <section ref={sectionRef} id="projects" className="py-24 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/3 right-0 h-1/5 bg-gradient-to-r from-primary/5 to-secondary/5 blur-3xl" />
       <div className="absolute bottom-0 left-0 right-1/3 h-1/5 bg-gradient-to-r from-secondary/5 to-primary/5 blur-3xl" />
       
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h2 className="section-title mx-auto">Projets en vedette</h2>
           <p className="text-muted-foreground mt-6">
-            
-Voici quelques-uns de mes projets récents. 
-Chacun d’entre eux présentait des défis et des 
-opportunités uniques pour créer des solutions élégantes en utilisant les technologies Web modernes.
+            Voici quelques-uns de mes projets récents. 
+            Chacun d'entre eux présentait des défis et des 
+            opportunités uniques pour créer des solutions élégantes en utilisant les technologies Web modernes.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {projects.map((project) => (
-            <ProjectCard
+          {projects.map((project, index) => (
+            <div
               key={project.title}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              tags={project.tags}
-              githubUrl={project.githubUrl}
-              liveUrl={project.liveUrl}
-            />
+              className={`transition-all duration-700 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                githubUrl={project.githubUrl}
+                liveUrl={project.liveUrl}
+              />
+            </div>
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div className={`mt-16 text-center transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '600ms' }}>
           <Button 
-            className="rounded-full px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground"
+            className="rounded-full px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground transform hover:scale-105 transition-transform duration-300"
           >
             <span>View All Projects</span>
             <ArrowRightIcon className="ml-2 h-4 w-4" />

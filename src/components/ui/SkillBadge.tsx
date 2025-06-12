@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -21,23 +20,24 @@ const SkillBadge: React.FC<SkillBadgeProps> = ({
         'group relative flex items-center gap-2 px-4 py-3 rounded-lg',
         'bg-card/80 backdrop-blur-sm border border-border/50',
         'hover:border-primary/30 transition-all duration-300',
-        'transform hover:-translate-y-1',
+        'transform hover:-translate-y-1 hover:shadow-lg',
+        'hover:bg-card/90',
         className
       )}
     >
       {icon && (
-        <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
+        <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300 group-hover:scale-110">
           {icon}
         </div>
       )}
       
-      <div className="flex flex-col">
-        <span className="font-medium">{name}</span>
+      <div className="flex flex-col flex-grow">
+        <span className="font-medium group-hover:text-primary transition-colors duration-300">{name}</span>
         
         {level > 0 && (
           <div className="mt-1 w-full h-1 bg-muted rounded-full overflow-hidden">
             <div 
-              className="h-full bg-primary rounded-full transition-all duration-500 ease-out"
+              className="h-full bg-primary rounded-full transition-all duration-500 ease-out group-hover:bg-primary/80"
               style={{ width: `${level * 10}%` }}
             />
           </div>
