@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
     {
       title: 'Réservation Terrain',
       description: 'Application web de réservation de terrains de sport. Permet aux utilisateurs de réserver des terrains, gérer leurs réservations et visualiser les disponibilités en temps réel.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
+      image: 'public/images/image.png',
       tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
       githubUrl: 'https://github.com/ismail-jamai/R-servation-terrain.git',
       liveUrl: '#',
