@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+
+import React from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import { fadeIn } from '@/lib/animations';
 
 interface ProjectCardProps {
   title: string;
@@ -9,7 +12,8 @@ interface ProjectCardProps {
   tags: string[];
   githubUrl?: string;
   liveUrl?: string;
-  className?: string;
+  fullStack?: string;
+  index: number;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -19,86 +23,87 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   tags,
   githubUrl,
   liveUrl,
-  className
+  fullStack,
+  index
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  
   return (
-    <div 
-      className={cn(
-        'group relative bg-card rounded-xl overflow-hidden border border-border/50',
-        'transition-all duration-500 ease-out',
-        'hover:border-primary/30 hover:shadow-xl',
-        'transform hover:-translate-y-2',
-        className
-      )}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+    <motion.div 
+      variants={fadeIn('up', 'spring', index * 0.2, 1)}
+      className="group relative bg-white/5 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-white/10 hover:border-primary/30 transition-all duration-700 shadow-2xl"
     >
-      <div className="relative aspect-video overflow-hidden">
+      <div className="relative aspect-[16/10] overflow-hidden">
         <img 
           src={image} 
           alt={title}
-          className={cn(
-            'w-full h-full object-cover transition-transform duration-700',
-            'group-hover:scale-110'
-          )}
+          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
         
-        <div className={cn(
-          'absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent',
-          'transition-opacity duration-500',
-          isHovered ? 'opacity-100' : 'opacity-0'
-        )}>
-          <div className={cn(
-            'absolute bottom-0 left-0 w-full p-4 transform transition-all duration-500',
-            isHovered ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-          )}>
-            <div className="flex flex-wrap gap-2 mb-2">
-              {tags.map((tag) => (
-                <span 
-                  key={tag} 
-                  className="text-xs px-2 py-1 rounded-full bg-primary/20 text-white backdrop-blur-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-            
-            <div className="flex gap-2">
-              {githubUrl && (
-                <a 
-                  href={githubUrl}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
-                  aria-label={`GitHub repository for ${title}`}
-                >
-                  <Github className="w-4 h-4 text-white" />
-                </a>
-              )}
-              
-              {liveUrl && (
-                <a 
-                  href={liveUrl}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 transform hover:scale-110"
-                  aria-label={`Live demo for ${title}`}
-                >
-                  <ExternalLink className="w-4 h-4 text-white" />
-                </a>
-              )}
-            </div>
-          </div>
+        {/* Hover Overlay Actions */}
+        <div className="absolute top-6 right-6 flex gap-3 transform translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+          {githubUrl && (
+            <a 
+              href={githubUrl}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 transition-all"
+            >
+              <Github className="w-5 h-5 text-white" />
+            </a>
+          )}
+          {liveUrl && (
+            <a 
+              href={liveUrl}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-2xl bg-primary hover:bg-primary/90 text-primary-foreground backdrop-blur-md transition-all shadow-lg shadow-primary/20"
+            >
+              <ArrowUpRight className="w-5 h-5" />
+            </a>
+          )}
         </div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold group-hover:text-primary transition-colors duration-300">{title}</h3>
-        <p className="mt-2 text-sm text-muted-foreground group-hover:text-muted-foreground/80 transition-colors duration-300">{description}</p>
+      <div className="p-8 space-y-4">
+        <div className="flex flex-wrap gap-2">
+          {tags.slice(0, 3).map((tag) => (
+            <span 
+              key={tag} 
+              className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        
+        <div>
+          <h3 className="text-2xl font-black group-hover:text-primary transition-colors duration-300 flex items-center gap-2">
+            {title}
+          </h3>
+          <p className="mt-3 text-muted-foreground leading-relaxed text-sm line-clamp-3">
+            {description}
+          </p>
+          {fullStack && (
+            <div className="mt-4 pt-4 border-t border-white/5">
+              <p className="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-1">Architecture</p>
+              <p className="text-xs text-muted-foreground leading-relaxed italic">{fullStack}</p>
+            </div>
+          )}
+        </div>
+
+        <div className="pt-4 flex items-center justify-between">
+          <a 
+            href={liveUrl || githubUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 group/btn"
+          >
+            Explore Project
+            <div className="w-8 h-px bg-primary/30 group-hover/btn:w-12 transition-all duration-300" />
+          </a>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
